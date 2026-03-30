@@ -1,0 +1,234 @@
+generated_at: '2026-03-30T22:39:31.308920'
+symbols:
+  EURUSD:
+    timeframe: M15
+    pattern_weights:
+      bearish_breakout_bar: -3
+      bearish_engulfing: 2
+      bearish_inside_bar: -2
+      bearish_pin_bar: 0
+      bearish_three_bar_reversal: -1
+      bullish_breakout_bar: -2
+      bullish_engulfing: 2
+      bullish_inside_bar: 0
+      bullish_pin_bar: 3
+      bullish_three_bar_reversal: -2
+      doji: 0
+      evening_star: 3
+      hammer: 0
+      morning_star: 2
+      outside_bar: 1
+      shooting_star: 3
+    bullish:
+    - bullish_engulfing
+    - hammer
+    - morning_star
+    - bullish_pin_bar
+    - bullish_three_bar_reversal
+    - bullish_breakout_bar
+    - bullish_inside_bar
+    bearish:
+    - bearish_engulfing
+    - shooting_star
+    - evening_star
+    - bearish_pin_bar
+    - bearish_three_bar_reversal
+    - bearish_breakout_bar
+    - bearish_inside_bar
+    neutral:
+    - doji
+    - outside_bar
+    trend:
+      ma_fast: 16
+      ma_slow: 72
+      swing_lookback: 10
+    volatility:
+      atr_period: 11
+      compression_factor: 0.7
+      expansion_factor: 1.5
+      percentile_window: 200
+    zones:
+      left: 3
+      right: 3
+      tolerance: 0.0006444790924022108
+    strategy:
+      exit_score: -2
+      min_confidence: 0.7097281293847328
+      min_score: 3
+      require_trend_alignment: true
+      sl_atr_multiplier: 1.163178865588863
+      tp_atr_multiplier: 2.141925268979651
+  '[SP500]':
+    timeframe: M15
+    pattern_weights:
+      bearish_breakout_bar: -3
+      bearish_engulfing: 3
+      bearish_inside_bar: 2
+      bearish_pin_bar: -3
+      bearish_three_bar_reversal: 0
+      bullish_breakout_bar: 1
+      bullish_engulfing: -3
+      bullish_inside_bar: -1
+      bullish_pin_bar: -3
+      bullish_three_bar_reversal: -2
+      doji: -2
+      evening_star: 0
+      hammer: -1
+      morning_star: 2
+      outside_bar: -2
+      shooting_star: -2
+    bullish:
+    - bullish_engulfing
+    - hammer
+    - morning_star
+    - bullish_pin_bar
+    - bullish_three_bar_reversal
+    - bullish_breakout_bar
+    - bullish_inside_bar
+    bearish:
+    - bearish_engulfing
+    - shooting_star
+    - evening_star
+    - bearish_pin_bar
+    - bearish_three_bar_reversal
+    - bearish_breakout_bar
+    - bearish_inside_bar
+    neutral:
+    - doji
+    - outside_bar
+    trend:
+      ma_fast: 5
+      ma_slow: 48
+      swing_lookback: 10
+    volatility:
+      atr_period: 22
+      compression_factor: 0.7
+      expansion_factor: 1.5
+      percentile_window: 200
+    zones:
+      left: 3
+      right: 3
+      tolerance: 0.0011074691766848437
+    strategy:
+      exit_score: -2
+      min_confidence: 0.7593070547715459
+      min_score: 3
+      require_trend_alignment: false
+      sl_atr_multiplier: 1.0016196276840206
+      tp_atr_multiplier: 5.272314145404167
+  US100:
+    timeframe: M15
+    pattern_weights:
+      bearish_breakout_bar: 1
+      bearish_engulfing: 3
+      bearish_inside_bar: 3
+      bearish_pin_bar: -1
+      bearish_three_bar_reversal: 2
+      bullish_breakout_bar: -2
+      bullish_engulfing: -1
+      bullish_inside_bar: 3
+      bullish_pin_bar: 3
+      bullish_three_bar_reversal: -2
+      doji: -1
+      evening_star: -1
+      hammer: 0
+      morning_star: -3
+      outside_bar: 1
+      shooting_star: 1
+    bullish:
+    - bullish_engulfing
+    - hammer
+    - morning_star
+    - bullish_pin_bar
+    - bullish_three_bar_reversal
+    - bullish_breakout_bar
+    - bullish_inside_bar
+    bearish:
+    - bearish_engulfing
+    - shooting_star
+    - evening_star
+    - bearish_pin_bar
+    - bearish_three_bar_reversal
+    - bearish_breakout_bar
+    - bearish_inside_bar
+    neutral:
+    - doji
+    - outside_bar
+    trend:
+      ma_fast: 9
+      ma_slow: 38
+      swing_lookback: 10
+    volatility:
+      atr_period: 19
+      compression_factor: 0.7
+      expansion_factor: 1.5
+      percentile_window: 200
+    zones:
+      left: 3
+      right: 3
+      tolerance: 0.0007483917522326689
+    strategy:
+      exit_score: -1
+      min_confidence: 0.6855228908247252
+      min_score: 2
+      require_trend_alignment: false
+      sl_atr_multiplier: 1.3120754089804805
+      tp_atr_multiplier: 5.85047407750487
+  USDJPY:
+    timeframe: M15
+    pattern_weights:
+      bearish_breakout_bar: -1
+      bearish_engulfing: -1
+      bearish_inside_bar: 2
+      bearish_pin_bar: 0
+      bearish_three_bar_reversal: -2
+      bullish_breakout_bar: 3
+      bullish_engulfing: 3
+      bullish_inside_bar: 1
+      bullish_pin_bar: -3
+      bullish_three_bar_reversal: -1
+      doji: -1
+      evening_star: 3
+      hammer: -3
+      morning_star: 3
+      outside_bar: 0
+      shooting_star: 1
+    bullish:
+    - bullish_engulfing
+    - hammer
+    - morning_star
+    - bullish_pin_bar
+    - bullish_three_bar_reversal
+    - bullish_breakout_bar
+    - bullish_inside_bar
+    bearish:
+    - bearish_engulfing
+    - shooting_star
+    - evening_star
+    - bearish_pin_bar
+    - bearish_three_bar_reversal
+    - bearish_breakout_bar
+    - bearish_inside_bar
+    neutral:
+    - doji
+    - outside_bar
+    trend:
+      ma_fast: 8
+      ma_slow: 75
+      swing_lookback: 10
+    volatility:
+      atr_period: 26
+      compression_factor: 0.7
+      expansion_factor: 1.5
+      percentile_window: 200
+    zones:
+      left: 3
+      right: 3
+      tolerance: 0.0014737049457195597
+    strategy:
+      exit_score: -2
+      min_confidence: 0.7593299747734403
+      min_score: 4
+      require_trend_alignment: true
+      sl_atr_multiplier: 3.4772564510800783
+      tp_atr_multiplier: 3.655777951418612
