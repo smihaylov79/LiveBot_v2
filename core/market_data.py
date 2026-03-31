@@ -42,30 +42,30 @@ class MarketDataMT5:
 
         # debug
 
-        # --- DEBUG: MT5 status ---
-        info = mt5.symbol_info(symbol)
-        tick = mt5.symbol_info_tick(symbol)
-
-        server_dt = None
-        if tick and tick.time:
-            server_dt = datetime.utcfromtimestamp(tick.time)
-
-        print(f"\n=== DEBUG {symbol} {timeframe} ===")
-        print(f"Bars returned: {len(df)}")
-
-        print(f"Last candle timestamp (UTC): {df.index[-1]}")
-        print(f"Local time now: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        print(f"MT5 server time (UTC): {server_dt}")
-
-        if tick:
-            print(f"Last tick time (UTC): {datetime.utcfromtimestamp(tick.time)}")
-            print(f"Last tick bid/ask: {tick.bid} / {tick.ask}")
-        else:
-            print("No tick data received!")
-
-        print(f"Symbol visible: {info.visible if info else 'N/A'}")
-        print(f"Symbol info: {info}")
-        print("-" * 60)
+        # # --- DEBUG: MT5 status ---
+        # info = mt5.symbol_info(symbol)
+        # tick = mt5.symbol_info_tick(symbol)
+        #
+        # server_dt = None
+        # if tick and tick.time:
+        #     server_dt = datetime.utcfromtimestamp(tick.time)
+        #
+        # print(f"\n=== DEBUG {symbol} {timeframe} ===")
+        # print(f"Bars returned: {len(df)}")
+        #
+        # print(f"Last candle timestamp (UTC): {df.index[-1]}")
+        # print(f"Local time now: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        # print(f"MT5 server time (UTC): {server_dt}")
+        #
+        # if tick:
+        #     print(f"Last tick time (UTC): {datetime.utcfromtimestamp(tick.time)}")
+        #     print(f"Last tick bid/ask: {tick.bid} / {tick.ask}")
+        # else:
+        #     print("No tick data received!")
+        #
+        # print(f"Symbol visible: {info.visible if info else 'N/A'}")
+        # print(f"Symbol info: {info}")
+        # print("-" * 60)
 
         return df[["open", "high", "low", "close", "tick_volume"]].rename(
             columns={"tick_volume": "volume"}

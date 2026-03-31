@@ -4,11 +4,13 @@ import pandas as pd
 
 from trading_core.live_signals import LiveSignalGenerator
 from core.broker_mt5 import BrokerMT5
+from core.utils.position_sizing import compute_position_size
 
 
 class Executor:
-    def __init__(self, broker: BrokerMT5):
+    def __init__(self, broker: BrokerMT5, bot_cfg: dict):
         self.broker = broker
+        self.bot_cfg = bot_cfg
 
     def _compute_sl_tp(
         self,
@@ -73,8 +75,16 @@ class Executor:
             print(symbol, timeframe, "→ cannot compute SL/TP")
             return
 
-        # TODO: position sizing; for now fixed volume
-        volume = 0.1
+        risk_pct = self.bot_cfg.get("risk_per_trade", 0.01)
+
+        volume = compute_position_size(
+            symbol=symbol,
+            sl_price=sl,
+            entry_price=signal["price"],
+            risk_pct=risk_pct,
+        )
+
+        print(f"Position size: {volume} lots")
 
         print(f"{symbol} {timeframe} → {signal['direction']} | score={signal['total_score']} conf={signal['confidence']:.2f}")
         print(f"SL={sl}, TP={tp}")
