@@ -12,7 +12,6 @@ from core.utils.candle_utils import drop_forming_candle
 from trading_core.candles import CandleMetrics
 
 
-
 class CandleBot(BaseBot):
     def __init__(self, strategy_cfg, bot_cfg):
         super().__init__(strategy_cfg)

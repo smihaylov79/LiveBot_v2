@@ -2,8 +2,8 @@ bot:
   name: CandleBot
 
   # Risk settings
-  risk_per_trade: 0.01      # 1% of total equity
-  max_open_positions: 5     # total positions allowed (hedging supported)
-
+  risk_per_trade: 0.06      # 1% of total equity
+  max_open_positions: 5     # total positions per symbol allowed (hedging supported)
+  max_margin_used: 0.7      # 70% of total equity
   # Position sizing mode
   position_size_mode: "risk_percent"   # future-proof: can add "fixed", "kelly", etc.

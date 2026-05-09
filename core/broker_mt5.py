@@ -31,6 +31,7 @@ class BrokerMT5:
         volume: float,
         sl: Optional[float] = None,
         tp: Optional[float] = None,
+        comment = 'LiveBot',
     ) -> OrderResult:
         self._symbol_info(symbol)
 
@@ -53,7 +54,7 @@ class BrokerMT5:
             "tp": tp or 0.0,
             "deviation": 20,
             "magic": 123456,
-            "comment": "LiveBot",
+            "comment": comment,
             "type_time": mt5.ORDER_TIME_GTC,
             "type_filling": mt5.ORDER_FILLING_FOK,
         }
